@@ -1,0 +1,6 @@
+<h1>Nosotros</h1>
+<ul *ngFor="let empleado of empleados">
+    <li (click)="clickEnEmpleado(empleado)">
+        <span>{{empleado.id}} - </span> {{empleado.name}}
+    </li>
+</ul>

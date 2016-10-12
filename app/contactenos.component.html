@@ -1,0 +1,16 @@
+<h1>Contáctenos</h1>
+<form (ngSubmit)="enviarForm(formulario)" #formulario="ngForm">
+    <fieldset class="form-group">
+        <label for="nombre">Nombre</label>
+        <input type="text" class="form-control" id="nombre" name="nombre" ngModel="" required>
+    </fieldset>
+    <fieldset class="form-group">
+        <label for="correoElectronico">Correo Electronico</label>
+        <input type="email" class="form-control" id="correoElectronico" name="correoElectronico" ngModel="" required pattern="^[_a-z0-9-]+(.[_a-z0-9-]+)*@[a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,4})$" #correoElectronico="ngModel">
+        <div *ngIf="!correoElectronico.valid && correoElectronico.dirty">
+            El correo electronico no es válido
+        </div>
+    </fieldset>
+    <button type="submit" class="btn btn-primary" [disabled]="!formulario.valid">Enviar</button>
+    
+</form>

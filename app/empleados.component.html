@@ -1,0 +1,15 @@
+<div *ngIf="empleado">
+<h3>{{empleado.name}}</h3>
+    <div>
+        <label>Id: </label>{{empleado.id}}
+    </div>
+    <div>
+        <label>Correo Electrónico: </label>{{empleado.email}}
+    </div>
+    <div>
+        <label>Compañia: </label>{{empleado.company.name}}
+    </div>
+    <p>
+        <button class="btn btn-primary" (click)="volver()">Volver</button>
+    </p>
+</div>
